@@ -24,8 +24,9 @@ class GameController extends AbstractController
      */
     public function index()
     {
-        $session = isset($_SESSION);
-        if (isset($_POST['page'])){
+        session_start();
+        $session = $_SESSION;
+        if (isset($_POST['page'])) {
             $_SESSION['page'] = $_POST['page'];
         }
         if (isset($_SESSION['page'])) {
