@@ -6,14 +6,18 @@
     --colorText: #A288A6;
     --colorButton: #7EB4E9;
 }
-
 body{
     background-color: var(--colorSecondary);
     color: var(--colorText);
+            height: 100vh;
+            width: 100vw;
 
 }
 .bubble {
     border: solid 1px black;
+    border-radius: 15px;
+    margin-top: 12%;
+    font-size: 25px;
 }
 .navbar{
     border-bottom: 1px solid var(--colorBorder);
