@@ -30,3 +30,6 @@ body{
 .bg-dark{
     background-color: var(--colorMain) !important;
 }
+.game{
+    padding-top: 70px;
+}
