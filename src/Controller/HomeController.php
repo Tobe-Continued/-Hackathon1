@@ -8,6 +8,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeManager;
+
 class HomeController extends AbstractController
 {
 
@@ -21,6 +23,9 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $homeManager = new HomeManager();
+        $test = $homeManager->selectAll('France');
+        var_dump($test);
+        return $this->twig->render('Home/index.html.twig', ['tableau' => $test]);
     }
 }
