@@ -10,7 +10,7 @@ namespace App\Controller;
 
 use App\Model\GameManager;
 use App\Model\HomeManager;
-use App\Model\GameManagerAPI;
+use App\Model\APIManager;
 
 class GameController extends AbstractController
 {
