@@ -12,13 +12,25 @@ namespace App\Model;
 /**
  *
  */
-class HomeManager extends AbstractManagerAPI
+class HomeManager extends AbstractManager
 {
+    /**
+     *
+     */
+    const TABLE = 'pays';
+
     /**
      *  Initializes this class.
      */
     public function __construct()
     {
-        parent::__construct();
+        parent::__construct(self::TABLE);
+    }
+
+    public function selectOneRandomCountry()
+    {
+        return $this->pdo->query('SELECT * FROM ' . $this->table . ' 
+                                           ORDER BY RAND()
+                                           LIMIT 1')->fetchAll();
     }
 }

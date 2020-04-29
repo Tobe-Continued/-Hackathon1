@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Model\APIManager;
 use App\Model\HomeManager;
 
 class HomeController extends AbstractController
@@ -23,9 +24,12 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        $homeManager = new HomeManager();
-        $test = $homeManager->selectAll('France');
-        var_dump($test);
-        return $this->twig->render('Home/index.html.twig', ['tableau' => $test]);
+        session_start();
+        $countryManager = new HomeManager();
+        $homeManager = new APIManager();
+        $country = $countryManager->selectOneRandomCountry();
+        $randomizer = $homeManager->selectOneArtworkByCountry($country[0]['name']);
+        $stolenArtwork = $homeManager->selectAllById($randomizer);
+        return $this->twig->render('Home/index.html.twig', ['tableauVole' => $stolenArtwork]);
     }
 }
