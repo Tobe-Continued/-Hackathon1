@@ -1,0 +1,14 @@
+.home{
+    height: 100vh;
+    background-image: url("/assets/images/background.png");
+    background-position: center;
+    background-position-y: -200px;
+    background-size: cover;
+    padding-top: 70px;
+}
+.loupe{
+    height: 30vw;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}

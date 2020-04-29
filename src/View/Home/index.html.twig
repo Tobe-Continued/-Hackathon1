@@ -1,7 +1,12 @@
 {% extends 'layout.html.twig' %}
-
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
 {% block content %}
-    <h1>Bienvenue !</h1>
-    <a href="/Game/index">Jouer au Jeu</a>
-    <p>tableau volé : {{ tableauVole.title }}</p>
+    <section class="container-fluid home">
+        <img class="loupe" src="/assets/images/loupe.png" alt="une loupe">
+        <h1>Bienvenue !</h1>
+        <a href="/Game/index">Jouer au Jeu</a>
+        <p>tableau volé : {{ tableauVole.title }}</p>
+    </section>
 {% endblock %}
