@@ -24,9 +24,13 @@ class GameController extends AbstractController
      */
     public function index()
     {
-        if (isset($_SESSION['page'])) {
-            return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig');
+        $session = isset($_SESSION);
+        if (isset($_POST['page'])){
+            $_SESSION['page'] = $_POST['page'];
         }
-        return $this->twig->render('Game/index.html.twig');
+        if (isset($_SESSION['page'])) {
+            return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $session ]);
+        }
+        return $this->twig->render('Game/index.html.twig', ['session' => $session ]);
     }
 }
