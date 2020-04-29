@@ -1,17 +1,19 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div>
-        <div>
+    <div class="d-flex container-fluid second-page">
+        <div class="d-flex flex-column bubble">
             <p>Bravo ! Tu as trouvé l'indice : {{ indice.name }}. À ton avis de quel pays s'agit il ?</p>
             <div>
+                {% for pays in pays %}
                 <form action="">
-                    <button></button>
+                    <button>{{ pays.name }}</button>
                 </form>
-                <form action="">
-                    <button></button>
-                </form>
+                {% endfor %}
             </div>
+        </div>
+        <div>
+            <img src="" alt="">
         </div>
     </div>
 {% endblock %}
