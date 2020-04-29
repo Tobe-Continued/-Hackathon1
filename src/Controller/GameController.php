@@ -25,17 +25,19 @@ class GameController extends AbstractController
      */
     public function index()
     {
+        session_start();
+        $session = $_SESSION;
         $gameManager = new GameManager();
         $indices = $gameManager->selectIndice();
-        $randomIndice = array_rand($indices, 2);
+        $randomIndice = array_rand($indices, 1);
         $indice = $indices[$randomIndice];
         if (isset($_POST['page'])) {
             $_SESSION['page'] = $_POST['page'];
         }
         if (isset($_SESSION['page'])) {
-            return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $_SESSION,
+            return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $session,
                 'indice' => $indice ]);
         }
-        return $this->twig->render('Game/index.html.twig', ['session' => $_SESSION, 'indice'=> $indice ]);
+        return $this->twig->render('Game/index.html.twig', ['session' => $session, 'indice'=> $indice ]);
     }
 }
