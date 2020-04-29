@@ -1,0 +1,12 @@
+.second-page div:first-child {
+    width: 40%;
+}
+
+.second-page figure {
+    width: 100%;
+    margin: 0;
+    margin-top: 5%;
+}
+.second-page figure img {
+    width: 50%;
+}
