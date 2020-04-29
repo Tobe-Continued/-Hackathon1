@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Model\GameManager;
 use App\Model\HomeManager;
 use App\Model\GameManagerAPI;
 
@@ -24,13 +25,17 @@ class GameController extends AbstractController
      */
     public function index()
     {
-        $session = isset($_SESSION);
-        if (isset($_POST['page'])){
+        $gameManager = new GameManager();
+        $indices = $gameManager->selectIndice();
+        $randomIndice = array_rand($indices, 2);
+        $indice = $indices[$randomIndice];
+        if (isset($_POST['page'])) {
             $_SESSION['page'] = $_POST['page'];
         }
         if (isset($_SESSION['page'])) {
-            return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $session ]);
+            return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $_SESSION,
+                'indice' => $indice ]);
         }
-        return $this->twig->render('Game/index.html.twig', ['session' => $session ]);
+        return $this->twig->render('Game/index.html.twig', ['session' => $_SESSION, 'indice'=> $indice ]);
     }
 }
