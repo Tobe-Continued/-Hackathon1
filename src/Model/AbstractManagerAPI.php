@@ -8,7 +8,6 @@
  */
 namespace App\Model;
 
-
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
@@ -54,13 +53,14 @@ abstract class AbstractManagerAPI
     public function selectAll(string $country = 'France'): array
     {
         try {
-            $response = $this->client->request('GET', METRO_API_HOST . '/public/collection/v1/search?geoLocation=' . $country . '&q=*');
+            $response = $this->client->
+            request('GET', METRO_API_HOST . '/public/collection/v1/search?geoLocation=' . $country . '&q=*');
             $statusCode = $response->getStatusCode(); // get Response status code 200
             if ($statusCode === 200) {
                 return $response->toArray();
                 // convert the response (here in JSON) to an PHP array
             }
-        }catch (ClientExceptionInterface $e) {
+        } catch (ClientExceptionInterface $e) {
             $this->error[] = $e;
         } catch (DecodingExceptionInterface $e) {
             $this->error[] = $e;
@@ -89,7 +89,7 @@ abstract class AbstractManagerAPI
                 return $response->toArray();
                 // convert the response (here in JSON) to an PHP array
             }
-        }catch (ClientExceptionInterface $e) {
+        } catch (ClientExceptionInterface $e) {
             $this->error[] = $e;
         } catch (DecodingExceptionInterface $e) {
             $this->error[] = $e;
