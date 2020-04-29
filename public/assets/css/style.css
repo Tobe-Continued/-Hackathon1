@@ -1,4 +1,5 @@
 @import "second.css";
+@import "third.css";
 :root{
     --colorMain: #2A1A1F;
     --colorSecondary: #776472;
@@ -14,10 +15,10 @@ body{
 
 }
 .bubble {
-    border: solid 1px black;
+    border: solid 1px var(--colorBorder);
     border-radius: 15px;
-    margin-top: 12%;
     font-size: 25px;
+    color: var(--colorText);
 }
 .navbar{
     border-bottom: 1px solid var(--colorBorder);

@@ -1,0 +1,19 @@
+.third-page {
+    height: 80vh;
+}
+
+.third-page .bubble {
+    width: 40%;
+
+}
+.third-page .bubble p {
+    margin: 5% ;
+}
+.third-page figure {
+    width: 100%;
+    margin: 0;
+    margin-top: 3%;
+}
+.third-page figure img {
+    width: 60%;
+}
