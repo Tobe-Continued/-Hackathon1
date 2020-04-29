@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container-fluid second-page align-middle d-flex align-items-center">
+        <div class="d-flex flex-column px-3 pt-3 bubble mx-auto ">
+            <p>Bravo ! Tu as trouvé l'indice : {{ indice.name }}. À ton avis de quel pays s'agit il ?</p>
+            <div class="d-flex justify-content-around">
+                {% for pays in pays %}
+                <form action="">
+                    <button class="btn btn-outline-primary">{{ pays.name }}</button>
+                </form>
+                {% endfor %}
+            </div>
+            <figure class="d-flex justify-content-end ">
+                <img src="../../assets/images/happy_sidekik.png" alt="">
+            </figure>
+        </div>
+    </div>
+{% endblock %}

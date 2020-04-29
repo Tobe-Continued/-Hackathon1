@@ -1,0 +1,12 @@
+@import "second.css";
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.bubble {
+    border: solid 1px black;
+    border-radius: 15px;
+    margin-top: 12%;
+    font-size: 25px;
+}

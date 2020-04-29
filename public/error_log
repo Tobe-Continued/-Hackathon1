@@ -1,0 +1,33 @@
+[29-Apr-2020 14:48:11 UTC] PHP Warning:  Uncaught Whoops\Exception\ErrorException: require_once(/home/wilder/quetes/-Hackathon1/public/../config/db.php): failed to open stream: No such file or directory in /home/wilder/quetes/-Hackathon1/public/index.php:13
+Stack trace:
+#0 /home/wilder/quetes/-Hackathon1/public/index.php(13): Whoops\Run->handleError(2, 'require_once(/h...', '/home/wilder/qu...', 13, Array)
+#1 /home/wilder/quetes/-Hackathon1/public/index.php(13): require_once()
+#2 {main}
+  thrown in /home/wilder/quetes/-Hackathon1/public/index.php on line 13
+[29-Apr-2020 14:48:11 UTC] PHP Stack trace:
+[29-Apr-2020 14:48:11 UTC] PHP   1. {main}() /home/wilder/quetes/-Hackathon1/public/index.php:0
+[29-Apr-2020 14:48:11 UTC] PHP Fatal error:  main(): Failed opening required '/home/wilder/quetes/-Hackathon1/public/../config/db.php' (include_path='.:/usr/share/php') in /home/wilder/quetes/-Hackathon1/public/index.php on line 13
+[29-Apr-2020 14:48:11 UTC] PHP Stack trace:
+[29-Apr-2020 14:48:11 UTC] PHP   1. {main}() /home/wilder/quetes/-Hackathon1/public/index.php:0
+[29-Apr-2020 14:50:39 UTC] PHP Warning:  Uncaught Whoops\Exception\ErrorException: require_once(/home/wilder/quetes/-Hackathon1/public/../config/api.php): failed to open stream: No such file or directory in /home/wilder/quetes/-Hackathon1/public/index.php:14
+Stack trace:
+#0 /home/wilder/quetes/-Hackathon1/public/index.php(14): Whoops\Run->handleError(2, 'require_once(/h...', '/home/wilder/qu...', 14, Array)
+#1 /home/wilder/quetes/-Hackathon1/public/index.php(14): require_once()
+#2 {main}
+  thrown in /home/wilder/quetes/-Hackathon1/public/index.php on line 14
+[29-Apr-2020 14:50:39 UTC] PHP Stack trace:
+[29-Apr-2020 14:50:39 UTC] PHP   1. {main}() /home/wilder/quetes/-Hackathon1/public/index.php:0
+[29-Apr-2020 14:50:39 UTC] PHP Fatal error:  main(): Failed opening required '/home/wilder/quetes/-Hackathon1/public/../config/api.php' (include_path='.:/usr/share/php') in /home/wilder/quetes/-Hackathon1/public/index.php on line 14
+[29-Apr-2020 14:50:39 UTC] PHP Stack trace:
+[29-Apr-2020 14:50:39 UTC] PHP   1. {main}() /home/wilder/quetes/-Hackathon1/public/index.php:0
+[29-Apr-2020 14:50:40 UTC] PHP Warning:  Uncaught Whoops\Exception\ErrorException: require_once(/home/wilder/quetes/-Hackathon1/public/../config/api.php): failed to open stream: No such file or directory in /home/wilder/quetes/-Hackathon1/public/index.php:14
+Stack trace:
+#0 /home/wilder/quetes/-Hackathon1/public/index.php(14): Whoops\Run->handleError(2, 'require_once(/h...', '/home/wilder/qu...', 14, Array)
+#1 /home/wilder/quetes/-Hackathon1/public/index.php(14): require_once()
+#2 {main}
+  thrown in /home/wilder/quetes/-Hackathon1/public/index.php on line 14
+[29-Apr-2020 14:50:40 UTC] PHP Stack trace:
+[29-Apr-2020 14:50:40 UTC] PHP   1. {main}() /home/wilder/quetes/-Hackathon1/public/index.php:0
+[29-Apr-2020 14:50:40 UTC] PHP Fatal error:  main(): Failed opening required '/home/wilder/quetes/-Hackathon1/public/../config/api.php' (include_path='.:/usr/share/php') in /home/wilder/quetes/-Hackathon1/public/index.php on line 14
+[29-Apr-2020 14:50:40 UTC] PHP Stack trace:
+[29-Apr-2020 14:50:40 UTC] PHP   1. {main}() /home/wilder/quetes/-Hackathon1/public/index.php:0
