@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * This file define API access infos.
+ *
+ * PHP version 7
+ *
+ * @category  PHP
+ * @package   PHP_SimpleMVC
+ * @author    WCS <contact@wildcodeschool.fr>
+ * @license  --
+ * @link     https://github.com/WildCodeSchool/simple-mvc
+ *
+ */
+
+define('MAPBOX_API_HOST', 'https://api.mapbox.com');
+define('MAPBOX_API_PUBLIC_TOKEN', 'public-token');
+define('MAPBOX_API_SECRET_TOKEN', 'secret-token');
+
+define('METRO_API_HOST', 'https://collectionapi.metmuseum.org');

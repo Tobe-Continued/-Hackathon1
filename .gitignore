@@ -3,4 +3,5 @@
 .phpcs-cache
 *.cache
 db.php
+api.php
 .idea
