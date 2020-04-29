@@ -30,6 +30,7 @@ class HomeController extends AbstractController
         $country = $countryManager->selectOneRandomCountry();
         $randomizer = $homeManager->selectOneArtworkByCountry($country[0]['name']);
         $stolenArtwork = $homeManager->selectAllById($randomizer);
+
         return $this->twig->render('Home/index.html.twig', ['tableauVole' => $stolenArtwork]);
     }
 }
