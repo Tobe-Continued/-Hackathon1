@@ -6,9 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 :root{
-    --colorMain: #2a1a1f;
+    --colorMain: rgba(42, 26, 31, 0.6);
     --colorSecondary: #776472;
-    --colorBorder: #3d2008;
+    --colorBorder: rgba(61, 32, 8, 0.6);
     --colorText: #F9DADA;
     --colorButton: #7EB4E9;
     --colorBubble: rgba(57, 44, 33, 0.9)

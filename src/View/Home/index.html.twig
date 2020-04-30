@@ -18,7 +18,10 @@
 </defs>
 </svg>
 
-
-        <a href="/Game/index" class="button"><p class="play">Jouer au Jeu</p></a>
+<form method="POST" action="/Game/index">
+    <label for="page" hidden></label>
+    <input type="text" value="first" id="page" name="page" hidden>
+        <button class="button"><a class="play">Jouer au Jeu</a></button>
+</form>
     </section>
 {% endblock %}
