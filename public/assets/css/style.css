@@ -3,7 +3,9 @@
 @import "third.css";
 @import "fifth.css";
 @import "sixth.css";
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+  :root{
     --colorMain: #2a1a1f;
     --colorSecondary: #776472;
     --colorBorder: #3d2008;
@@ -52,4 +54,7 @@ button {
 }
 button:hover{
     background-color: var(--colorBorder);
+}
+p, button {
+    font-family: 'Indie Flower', cursive;
 }
