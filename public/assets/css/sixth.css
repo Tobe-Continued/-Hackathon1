@@ -1,0 +1,34 @@
+.icon-click-first button img, .icon-click-second button img, .icon-click-third button img, .icon-click-fourth
+button img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-click-first, .icon-click-second, .icon-click-third, .icon-click-fourth {
+    width: 20%;
+    height: 20%;
+}
+.icon-click-first button, .icon-click-second button, .icon-click-third button, .icon-click-fourth button {
+    border: none;
+}
+
+.icon-click-first {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+}
+.icon-click-second {
+    position: absolute;
+    top: 28%;
+    left: 28%;
+}
+.icon-click-third {
+    position: absolute;
+    top: 56%;
+    left: 75%;
+}
+.icon-click-fourth {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+}
