@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/final.css">
+{% endblock %}
+{% block content %}
+    <div class="final-page container-fluid d-flex justify-content-center flex-column pages">
+        <h1>Félicitation !</h1>
+        <h2>Vous avez retrouvé l'Oeuvre !</h2>
+        <div class="fenetre bubble d-flex flex-row">
+            <img src="{{ artwork.primaryImage }}" alt="{{ artwork.medium }}">
+            <div class="desc d-flex flex-column">
+                <h3>{{ artwork.title }}</h3>
+                <p>{{ artwork.title }} fut créer par {{ artwork.artistDisplayName is empty ? 'un artiste inconnu' : artwork.artistDisplayName }} vers {{ artwork.objectDate }}
+                    et on y trouve {% for tag in artwork.tags %} {{ tag.term }},{% endfor %}
+                </p>
+                <form action="" method="POST">
+                    <label for="toMenu" hidden></label>
+                    <input type="text" value="" id="toMenu" name="toMenu" hidden>
+                    <button>Revenir au menu principal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
