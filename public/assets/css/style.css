@@ -2,16 +2,17 @@
 @import "second.css";
 @import "third.css";
 @import "fifth.css";
+@import "final.css";
 :root{
     --colorMain: #2a1a1f;
     --colorSecondary: #776472;
     --colorBorder: #3D2008;
     --colorText: #F9DADA;
     --colorButton: #7EB4E9;
-    --colorBubble:rgba(57, 44, 33, 0.9)
+    --colorBubble: rgba(57, 44, 33, 0.9)
 }
 body{
-    background-color: var(--colorSecondary);
+    background-color: var(--colorMain);
     color: var(--colorText);
             height: 100vh;
             width: 100vw;
@@ -27,11 +28,6 @@ body{
 .navbar{
     border-bottom: 1px solid var(--colorBorder);
     height: 10vh;
-}
-.footer{
-    width: 100%;
-    height: 10vh;
-    border-top: 1px solid var(--colorBorder);
 }
 .bg-dark{
     background-color: var(--colorMain) !important;

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark ">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/Home/index">
         <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Bootstrap
+        L'Oeuvre Disparu !
     </a>
 </nav>
