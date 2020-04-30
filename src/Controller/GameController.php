@@ -28,7 +28,8 @@ class GameController extends AbstractController
         session_start();
         $session = $_SESSION;
         $gameManager = new GameManager();
-
+        $homeManager = new APIManager();
+        $stolenArtwork = $homeManager->selectAllById($_SESSION['tableauId']);
         $pays = $gameManager->selectPays($_SESSION['tableauPays']);
         $randomPays = array_rand($pays, 1);
         $slow = $_SESSION['tableauPays'];
@@ -48,9 +49,10 @@ class GameController extends AbstractController
         }
         if (isset($_SESSION['page'])) {
             return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $session,
-                'indice' => $indice, 'pays' => $pays, 'error'=> $error ?? null ]);
+                'indice' => $indice, 'pays' => $pays, 'error'=> $error ?? null ,
+                'stolenArtwork'=>$stolenArtwork ?? null]);
         }
         return $this->twig->render('Game/index.html.twig', ['session' => $session, 'indice'=> $indice[0] ?? null,
-            'pays' => $pays]);
+            'pays' => $pays, 'stolenArtwork'=>$stolenArtwork ?? null ]);
     }
 }
