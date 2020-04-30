@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="fifth-page container-fluid d-flex justify-content-center flex-column pages">
+        <div class="bubble mx-auto pt-3">
+            <p>L'objet semble provenir de ce magasin, mais je n'en suis pas sûr.<br><br>Jetons un oeil!</p>
+            <figure class="d-flex justify-content-end ">
+                <img src="/assets/images/happy_sidekik.png" alt="">
+            </figure>
+        </div>
+        <div>
+            <form class="d-flex justify-content-end" action="" method="post">
+                <label for="page"></label>
+                <input type="text" name="page" value="sixth" hidden>
+                <button class="btn-lg mt-5 ">Continuer !</button>
+            </form>
+        </div>
+{% endblock %}
