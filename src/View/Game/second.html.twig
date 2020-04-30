@@ -1,12 +1,15 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div class="container-fluid second-page align-middle d-flex align-items-center">
+    <div class="container-fluid second-page align-middle d-flex align-items-center pages">
         <div class="d-flex flex-column px-3 pt-3 bubble mx-auto ">
             <p>Bravo ! Tu as trouvé l'indice : {{ indice.name }}. À ton avis de quel pays s'agit il ?</p>
+                <p>{{ error }}</p>
             <div class="d-flex justify-content-around">
                 {% for pays in pays %}
-                <form action="">
+                <form action="" method="post">
+                    <label for="pays"></label>
+                    <input type="text" name="pays" value="{{ pays.name }}" hidden>
                     <button class="btn btn-outline-primary">{{ pays.name }}</button>
                 </form>
                 {% endfor %}

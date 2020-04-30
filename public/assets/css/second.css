@@ -10,3 +10,13 @@
 .second-page figure img {
     width: 50%;
 }
+@media screen and (max-width:768px) {
+    .second-page div:first-child {
+        width: 80%;
+    }
+}
+@media screen and (max-width:375px) {
+    .second-page div:first-child {
+        width: 90%;
+    }
+}
