@@ -16,11 +16,13 @@
 .first-page p {
     width: 20vw;
 }
-.icon-click {
+.icon-click button img{
     height: 50px;
     width: 50px;
-    border: solid 10px #2a1a1f;
-    bottom: 20%;
+}
+.icon-click {
+ position: absolute;
+    top: 20%;
     left: 70%;
 }
 .icon-click :hover {
