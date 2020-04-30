@@ -1,11 +1,14 @@
+@import "first.css";
 @import "second.css";
 @import "third.css";
+@import "fifth.css";
 :root{
-    --colorMain: #2A1A1F;
+    --colorMain: #2a1a1f;
     --colorSecondary: #776472;
-    --colorBorder: #926940;
-    --colorText: #A288A6;
+    --colorBorder: #3D2008;
+    --colorText: #F9DADA;
     --colorButton: #7EB4E9;
+    --colorBubble:rgba(57, 44, 33, 0.9)
 }
 body{
     background-color: var(--colorSecondary);
@@ -15,10 +18,11 @@ body{
 
 }
 .bubble {
-    border: solid 1px var(--colorBorder);
+    border: solid 8px var(--colorBorder);
     border-radius: 15px;
     font-size: 25px;
     color: var(--colorText);
+    background-color: var(--colorBubble);
 }
 .navbar{
     border-bottom: 1px solid var(--colorBorder);
@@ -37,4 +41,14 @@ body{
 }
 .pages {
     height: 80vh;
+}
+button {
+    border: 2px solid var(--colorText);
+    color: var(--colorText);
+    background-color: transparent;
+    border-radius: 10px;
+
+}
+button:hover{
+    background-color: var(--colorBorder);
 }

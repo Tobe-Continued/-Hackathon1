@@ -13,7 +13,8 @@
         "ext-pdo" : "*",
         "twig/twig": "^2.4",
         "symfony/http-client": "^5.0",
-      "ext-json": "*"
+      "ext-json": "*",
+      "ext-curl": "*"
     },
     "require-dev": {
         "phpmd/phpmd": "^2.7",

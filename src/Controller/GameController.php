@@ -27,16 +27,15 @@ class GameController extends AbstractController
     {
         session_start();
         $session = $_SESSION;
-        $startPays = 'France';
         $gameManager = new GameManager();
-        $indices = $gameManager->selectIndice();
-        $pays = $gameManager->selectPays($startPays);
-        $randomIndice = array_rand($indices, 1);
+        $pays = $gameManager->selectPays($_SESSION['tableauPays']);
         $randomPays = array_rand($pays, 1);
-        $startPays = ['name' => $startPays];
+        $slow = $_SESSION['tableauPays'];
+        $startPays = ['name' => $_SESSION['tableauPays']];
+        $indice = $gameManager->selectIndice($slow);
         $pays = [$pays[$randomPays],$startPays];
         shuffle($pays);
-        $indice = $indices[$randomIndice];
+        list($indice) = $indice;
         if (isset($_POST['pays']) && $_POST['pays'] === $startPays['name']) {
             $_SESSION['page'] = 'third';
         }
@@ -50,7 +49,7 @@ class GameController extends AbstractController
             return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $session,
                 'indice' => $indice, 'pays' => $pays, 'error'=> $error ?? null ]);
         }
-        return $this->twig->render('Game/index.html.twig', ['session' => $session, 'indice'=> $indice ,
+        return $this->twig->render('Game/index.html.twig', ['session' => $session, 'indice'=> $indice[0] ?? null,
             'pays' => $pays]);
     }
 }

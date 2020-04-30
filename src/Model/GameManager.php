@@ -18,9 +18,10 @@ class GameManager extends AbstractManager
     {
         parent ::__construct(self::TABLE);
     }
-    public function selectIndice(): array
+    public function selectIndice($startPays): array
     {
-        return $this->pdo->query('SELECT * FROM ' . $this->table)->fetchAll();
+        return $this->pdo->query('SELECT `Indice`.`name` FROM `pays` LEFT JOIN `Indice` ON `Indice`.`id_Pays` 
+    = `pays`.`id` WHERE (`pays`.name LIKE "'. $startPays . '")')->fetchAll();
     }
     public function selectPays($startPays = null)
     {
