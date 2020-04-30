@@ -1,0 +1,32 @@
+.fifth-page {
+    object-fit: cover;
+    background: url('/assets/images/shop.png') no-repeat center;
+}
+
+.fifth-page .bubble {
+    width: 40%;
+}
+.fifth-page .bubble p {
+    margin: 5% ;
+}
+.fifth-page figure {
+    width: 100%;
+    margin: 0;
+    margin-top: 3%;
+}
+.fifth-page figure img {
+    width: 60%;
+}
+.fifth-page form button {
+    margin-right: 20vw;
+}
+@media screen and (max-width:768px) {
+    .fifth-page .bubble {
+        width: 80%;
+    }
+}
+@media screen and (max-width:375px) {
+    .fifth-page .bubble {
+        width: 90%;
+    }
+}
