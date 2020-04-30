@@ -3,8 +3,8 @@
 {% block content %}
     <div class="container-fluid first-page align-middle d-flex align-items-lg-center pages">
         <div class="d-flex flex-column px-3 pt-3 bubble mx-lg-auto ">
-            <p>Oh Non !! le [TABLEAU] a disparu! cherchons un indice pour tenter de le retrouver ...</p>
-            <figure class="d-flex justify-content-end ">
+            <p>Oh Non !! le " {{ stolenArtwork.title }} " a disparu! cherchons un indice pour tenter de le retrouver ...</p>
+            <figure class=" ">
                 <img src="/assets/images/thinking_sidekick.png" alt="">
             </figure>
         </div>
@@ -12,6 +12,6 @@
     <form class="icon-click" action="" method="post">
         <label for="page"></label>
         <input type="text" name="page" value="second" hidden>
-        <button class=""><img src="/assets/images/thinking_sidekick.png" alt=""></button>
+        <button class=""><img src="/assets/images/timbre.png" alt=""></button>
     </form>
 {% endblock %}
