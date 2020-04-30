@@ -40,12 +40,15 @@ class GameController extends AbstractController
         if (isset($_POST['pays']) && $_POST['pays'] === $startPays['name']) {
             $_SESSION['page'] = 'third';
         }
+        if (isset($_POST['pays']) && $_POST['pays'] !== $startPays['name']) {
+            $error = 'Mauvaise Réponse !';
+        }
         if (isset($_POST['page'])) {
             $_SESSION['page'] = $_POST['page'];
         }
         if (isset($_SESSION['page'])) {
             return $this->twig->render('Game/' . $_SESSION['page'] . '.html.twig', ['session' => $session,
-                'indice' => $indice, 'pays' => $pays ]);
+                'indice' => $indice, 'pays' => $pays, 'error'=> $error ?? null ]);
         }
         return $this->twig->render('Game/index.html.twig', ['session' => $session, 'indice'=> $indice ,
             'pays' => $pays]);
