@@ -2,6 +2,7 @@
 @import "second.css";
 @import "third.css";
 @import "fifth.css";
+@import "sixth.css";
 :root{
     --colorMain: #2a1a1f;
     --colorSecondary: #776472;
