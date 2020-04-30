@@ -1,0 +1,52 @@
+.first-page {
+    object-fit: cover;
+    background: url('/assets/images/background.png') no-repeat center;
+}
+.first-page figure {
+
+    margin: 0;
+    margin-top: 5%;
+}
+.first-page figure img {
+    width: 80%;
+}
+.first-page div:first-child {
+
+}
+.first-page p {
+    width: 20vw;
+}
+.icon-click {
+    height: 50px;
+    width: 50px;
+    border: solid 10px #2a1a1f;
+    bottom: 20%;
+    left: 70%;
+}
+.icon-click :hover {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+@media screen and (max-width:768px) {
+    .first-page div:first-child {
+        width: 50%;
+        height: 50%;
+        justify-content: space-between;
+        margin-top: auto;
+        margin-left: auto;
+        margin-bottom: 3%;
+    }
+    .first-page p {
+        width: 100%;
+    }
+    .first-page figure {
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width:375px) {
+    .first-page div:first-child {
+        width: 60%;
+    }
+    .first-page p {
+        font-size: 13px;
+    }
+}
