@@ -28,9 +28,9 @@ class HomeController extends AbstractController
         $countryManager = new HomeManager();
         $homeManager = new APIManager();
         $country = $countryManager->selectOneRandomCountry();
-        $randomizer = $homeManager->selectOneArtworkByCountry($country[0]['name']);
-        $stolenArtwork = $homeManager->selectAllById($randomizer);
-
+        $_SESSION['tableauPays'] = $country[0]['name'];
+        $_SESSION['tableauId'] = $homeManager->selectOneArtworkByCountry($_SESSION['tableauPays']);
+        $stolenArtwork = $homeManager->selectAllById($_SESSION['tableauId']);
         return $this->twig->render('Home/index.html.twig', ['tableauVole' => $stolenArtwork]);
     }
 }

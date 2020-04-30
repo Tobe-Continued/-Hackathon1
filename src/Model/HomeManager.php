@@ -27,7 +27,7 @@ class HomeManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-    public function selectOneRandomCountry()
+    public function selectOneRandomCountry(): array
     {
         return $this->pdo->query('SELECT * FROM ' . $this->table . ' 
                                            ORDER BY RAND()
