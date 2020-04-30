@@ -1,0 +1,31 @@
+
+.third-page .bubble {
+    width: 40%;
+}
+.third-page .bubble p {
+    margin: 5% ;
+}
+.third-page figure {
+    width: 100%;
+    margin: 0;
+    margin-top: 3%;
+}
+.third-page figure img {
+    width: 60%;
+}
+.third-page form button {
+    margin-right: 15vw;
+}
+@media screen and (max-width:768px) {
+    .third-page .bubble {
+        width: 80%;
+    }
+}
+@media screen and (max-width:375px) {
+    .third-page .bubble {
+        width: 90%;
+    }
+    .third-page form button {
+        margin: 0 auto;
+    }
+}

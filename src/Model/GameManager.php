@@ -22,8 +22,12 @@ class GameManager extends AbstractManager
     {
         return $this->pdo->query('SELECT * FROM ' . $this->table)->fetchAll();
     }
-    public function selectPays(): array
+    public function selectPays($startPays = null)
     {
-        return $this->pdo->query('SELECT * FROM pays')->fetchAll();
+        if ($startPays === null) {
+            return $this->pdo->query('SELECT * FROM pays')->fetchAll();
+        }
+
+        return $this->pdo->query('SELECT * FROM pays WHERE name <> "' . $startPays.'"')->fetchAll();
     }
 }

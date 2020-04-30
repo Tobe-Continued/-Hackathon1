@@ -58,7 +58,8 @@ class APIManager
 
     public function selectAllByCountry(string $country)
     {
-        return $this->connect('GET', '/public/collection/v1/search?geoLocation=' . $country . '&q=*', 'objectIDs');
+        $base = "/public/collection/v1/search?departmentIds=11&geoLocation=";
+        return $this->connect('GET', $base . $country . '&q=*', 'objectIDs');
     }
 
     public function selectAllById(int $id)
@@ -68,7 +69,8 @@ class APIManager
 
     public function selectOneArtworkByCountry(string $country)
     {
-        $result =  $this->connect('GET', '/public/collection/v1/search?geoLocation=' . $country . '&q=*', 'objectIDs');
+        $base = "/public/collection/v1/search?departmentIds=11&geoLocation=";
+        $result =  $this->connect('GET', $base . $country . '&q=*', 'objectIDs');
         shuffle($result);
         return $result[1];
     }
