@@ -28,7 +28,6 @@ class GameController extends AbstractController
         session_start();
         $session = $_SESSION;
         $gameManager = new GameManager();
-
         $pays = $gameManager->selectPays($_SESSION['tableauPays']);
         $randomPays = array_rand($pays, 1);
         $slow = $_SESSION['tableauPays'];
